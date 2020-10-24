@@ -15,6 +15,7 @@
                         @endif
 
                         Hello, admin
+                        <a href="{{route('admin.skills.home')}}">Skills List</a>
                     </div>
                 </div>
             </div>

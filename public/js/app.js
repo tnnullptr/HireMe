@@ -1951,7 +1951,7 @@ __webpack_require__.r(__webpack_exports__);
     accept: function accept(e) {
       var that = this;
       axios.post(that.acceptEndpoint, {
-        'status': e.currentTarget.dataset.status,
+        'status': Number(e.currentTarget.dataset.status),
         'id': that.skill.id
       }).then(function (res) {
         //console.table(res.data)
@@ -37605,7 +37605,7 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-success",
-                    attrs: { type: "button", "data-status": "true" },
+                    attrs: { type: "button", "data-status": "1" },
                     on: {
                       click: function($event) {
                         return _vm.accept($event)
@@ -37628,7 +37628,7 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-danger",
-                    attrs: { type: "button", "data-status": "false" },
+                    attrs: { type: "button", "data-status": "0" },
                     on: {
                       click: function($event) {
                         return _vm.accept($event)
