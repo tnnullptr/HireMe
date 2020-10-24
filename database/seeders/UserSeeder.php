@@ -22,6 +22,20 @@ class UserSeeder extends Seeder
             'api_token' => Str::random(60),
             'type'=> 'ADMIN'
         ]);
+        User::create([
+            'name' => 'User',
+            'email' => 'user@user.com',
+            'password' => bcrypt('useruser'),
+            'api_token' => Str::random(60),
+            'type'=> 'USER'
+        ]);
+        User::create([
+            'name' => 'Company',
+            'email' => 'company@company.com',
+            'password' => bcrypt('companycompany'),
+            'api_token' => Str::random(60),
+            'type'=> 'COMPANY'
+        ]);
         /* Type
          *   ADMIN,USER,COMPANY
          * */

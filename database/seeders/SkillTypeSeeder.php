@@ -18,8 +18,22 @@ class SkillTypeSeeder extends Seeder
             'title' => 'Frontend Developer',
             'verified'=>true
         ]);
-        /* Type
-         *   ADMIN,USER,COMPANY
-         * */
+        SkillType::create([
+            'title' => 'Backend Developer',
+            'verified'=>true
+        ]);
+        SkillType::create([
+            'title' => 'Fullstack Developer',
+            'verified'=>true
+        ]);
+        SkillType::create([
+            'title' => 'Teacher',
+            'verified'=>true
+        ]);
+        SkillType::create([
+            'title' => 'IT',
+            'verified'=>true
+        ]);
+
     }
 }
