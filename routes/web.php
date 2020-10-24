@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['reset'=>false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -34,4 +34,7 @@ Route::get('/personal', [App\Http\Controllers\PersonalController::class, 'index'
 Route::post('/personal/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
 
 Route::get('/company', [App\Http\Controllers\CompanyController::class, 'index'])->name('company.home');
-//Route::post('/company/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
+Route::get('/skills/add', function () {
+    return view('company.add');
+})->name('company.job.add');
+Route::post('/company/addJob', [App\Http\Controllers\CompanyController::class, 'job_add'])->name('company.job.action.add');

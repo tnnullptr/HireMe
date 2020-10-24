@@ -1921,21 +1921,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Job",
   props: ['jobs', 'admin'],
@@ -1948,20 +1933,20 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    accept: function accept(e) {
-      var that = this;
-      axios.post(that.acceptEndpoint, {
-        'status': Number(e.currentTarget.dataset.status),
-        'id': that.skill.id
-      }).then(function (res) {
-        //console.table(res.data)
-        console.log("Saved Update");
-        alert(res.data.msg);
-        location.reload();
-      })["catch"](function (error) {
-        console.error(error);
-      });
-    }
+    /*accept(e){
+        var that = this
+        axios.post(that.acceptEndpoint, {
+            'status': Number(e.currentTarget.dataset.status),
+            'id': that.skill.id
+        }).then((res) => {
+            //console.table(res.data)
+            console.log("Saved Update")
+            alert(res.data.msg )
+            location.reload()
+        }).catch((error) => {
+            console.error(error)
+        })
+    }*/
   }
 });
 
@@ -37630,79 +37615,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "li",
-      {
-        staticClass: "list-group-item",
-        attrs: { "data-target": "#collapse_skill_" + _vm.job2.id }
-      },
-      [
-        _vm._v("\n        " + _vm._s(_vm.job2.name) + "\n        "),
+  return _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+    _c("div", { staticClass: "card-body" }, [
+      _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.job2.name))]),
+      _vm._v(" "),
+      _c("h6", { staticClass: "card-subtitle mb-2 text-muted" }, [
         _c("i", { staticClass: "fa fa-money" }),
-        _vm._v(_vm._s(_vm.job2.salary) + "\n    ")
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", [
-      _c("div", { staticClass: "form-group" }, [
-        _vm.admin
-          ? _c(
-              "div",
-              { staticClass: "btn-group w-100", attrs: { role: "group" } },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-success",
-                    attrs: { type: "button", "data-status": "1" },
-                    on: {
-                      click: function($event) {
-                        return _vm.accept($event)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-check-circle ",
-                      attrs: {
-                        "data-toggle": "tooltip",
-                        "data-placement": "top",
-                        title: "Verified Skill Type"
-                      }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger",
-                    attrs: { type: "button", "data-status": "0" },
-                    on: {
-                      click: function($event) {
-                        return _vm.accept($event)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-times-circle ",
-                      attrs: {
-                        "data-toggle": "tooltip",
-                        "data-placement": "top",
-                        title: "Rejected Skill Type"
-                      }
-                    })
-                  ]
-                )
-              ]
-            )
-          : _vm._e()
+        _vm._v(": " + _vm._s(_vm.job2.salary))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _c("i", { staticClass: "fa fa-location-arrow" }),
+        _vm._v(": " + _vm._s(_vm.job2.location) + " ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _c("i", { staticClass: "fa fa-bookmark" }),
+        _vm._v(": " + _vm._s(_vm.job2.type) + " ")
       ])
-    ]),
-    _vm._v(" "),
-    _c("br")
+    ])
   ])
 }
 var staticRenderFns = []

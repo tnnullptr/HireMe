@@ -2,10 +2,11 @@
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{job2.name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{job2.salary}}</h6>
+            <p class="card-text"><i class="fa fa-location-arrow"></i>: {{job2.location}} </p>
+            <p class="card-text"><i class="fa fa-bookmark"></i>: {{job2.type}} </p>
+
+
         </div>
     </div>
 </template>
@@ -23,7 +24,7 @@ export default {
         }
     },
     methods:{
-        accept(e){
+        /*accept(e){
             var that = this
             axios.post(that.acceptEndpoint, {
                 'status': Number(e.currentTarget.dataset.status),
@@ -36,7 +37,7 @@ export default {
             }).catch((error) => {
                 console.error(error)
             })
-        }
+        }*/
     }
 }
 </script>
