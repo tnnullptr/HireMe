@@ -1,5 +1,5 @@
 <template>
-    <div class="card" style="width: 18rem;">
+    <div class="card w-100">
         <div class="card-body">
             <h5 class="card-title">{{job2.name}}</h5>
             <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{job2.salary}}</h6>
