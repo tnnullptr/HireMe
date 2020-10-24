@@ -1921,6 +1921,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Job",
   props: ['jobs', 'admin', 'skill'],
@@ -37635,6 +37636,10 @@ var render = function() {
       _c("p", { staticClass: "card-text" }, [
         _c("i", { staticClass: "fa fa-bookmark" }),
         _vm._v(": " + _vm._s(_vm.job2.type) + " ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v(_vm._s(_vm.job2.context) + " ")
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "card-text" }, [
