@@ -1,13 +1,16 @@
 <template>
     <div class="card w-100">
+        <div class="card-header">
+            {{job2.name}}
+        </div>
         <div class="card-body">
-            <h5 class="card-title">{{job2.name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{job2.salary}}</h6>
-            <p class="card-text"><i class="fa fa-location-arrow"></i>: {{job2.location}} </p>
-            <p class="card-text"><i class="fa fa-bookmark"></i>: {{job2.type}} </p>
             <p class="card-text">{{job2.context}} </p>
-            <p class="card-text"><i class="fa fa-bookmark"></i>: {{skills}} </p>
-
+        </div>
+        <div class="card-footer">
+            <p class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i> {{job2.salary}}</p>
+            <p class="card-subtitle mb-2 text-muted"><i class="fa fa-location-arrow"></i> {{job2.location}} </p>
+            <p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> {{job2.type == "PARTTIME" ? "兼職" : job2.type == "FULLTIME" ? "全職" : "政府官方"}} </p>
+            <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> {{skills}} </p>-->
         </div>
     </div>
 </template>

@@ -81,19 +81,7 @@ class HomeController extends Controller
             array_push($nnSE,$job2info[$job['id']]);
         }
 
-        //var_dump($nnSE);
-        $AD = [];
-        foreach($hsinchu_work as $work){
-            $t = new Job;
-            $t->name = $work['title'];
-            $t->context = $work['徵才條件'].$work['報名方式'];
-            $t->location = $work['工作地點'];
-            $t->salary = 'not set';
-            $t->company_id = 1;
-            $t->type = "GOV";
-            //var_dump($t);
-            //array_splice( $nnSE, rand ( 0 , sizeof($nnSE)), 0, $t );
-        }
+
 
         /*var_dump($newSE);
         echo "<br>";
@@ -101,6 +89,6 @@ class HomeController extends Controller
         return view('home')
             ->with('Jobs',$nnSE)
             ->with('Info',$job2info)
-            ->with('Special',$AD);
+            ->with('Special',$hsinchu_work);
     }
 }

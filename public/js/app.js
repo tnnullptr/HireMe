@@ -1922,6 +1922,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Job",
   props: ['jobs', 'admin', 'skill'],
@@ -37620,31 +37624,40 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card w-100" }, [
+    _c("div", { staticClass: "card-header" }, [
+      _vm._v("\n        " + _vm._s(_vm.job2.name) + "\n    ")
+    ]),
+    _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [
-      _c("h5", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.job2.name))]),
-      _vm._v(" "),
-      _c("h6", { staticClass: "card-subtitle mb-2 text-muted" }, [
-        _c("i", { staticClass: "fa fa-money" }),
-        _vm._v(": " + _vm._s(_vm.job2.salary))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _c("i", { staticClass: "fa fa-location-arrow" }),
-        _vm._v(": " + _vm._s(_vm.job2.location) + " ")
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
-        _c("i", { staticClass: "fa fa-bookmark" }),
-        _vm._v(": " + _vm._s(_vm.job2.type) + " ")
-      ]),
-      _vm._v(" "),
       _c("p", { staticClass: "card-text" }, [
         _vm._v(_vm._s(_vm.job2.context) + " ")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-footer" }, [
+      _c("p", { staticClass: "card-subtitle mb-2 text-muted" }, [
+        _c("i", { staticClass: "fa fa-money" }),
+        _vm._v(" " + _vm._s(_vm.job2.salary))
       ]),
       _vm._v(" "),
-      _c("p", { staticClass: "card-text" }, [
+      _c("p", { staticClass: "card-subtitle mb-2 text-muted" }, [
+        _c("i", { staticClass: "fa fa-location-arrow" }),
+        _vm._v(" " + _vm._s(_vm.job2.location) + " ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-subtitle mb-2 text-muted" }, [
         _c("i", { staticClass: "fa fa-bookmark" }),
-        _vm._v(": " + _vm._s(_vm.skills) + " ")
+        _vm._v(
+          " " +
+            _vm._s(
+              _vm.job2.type == "PARTTIME"
+                ? "兼職"
+                : _vm.job2.type == "FULLTIME"
+                ? "全職"
+                : "政府官方"
+            ) +
+            " "
+        )
       ])
     ])
   ])
