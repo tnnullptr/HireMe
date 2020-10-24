@@ -33,13 +33,12 @@ class PersonalController extends Controller {
 
     public function index() {
         $skill_types = SkillType::all();
-        $skill_own   = Skill::where('user_id',Auth::user()->id);
+        $skill_own   = Skill::where('user_id',Auth::user()->id)->get();
 
         $owning_skill = [];
         foreach($skill_own as $skill){
             $owning_skill[$skill->priority] = $skill->skill_type;
         }
-
         return view('personal.home')
             ->with('skills', $skill_types)
             ->with('personal_skills',$owning_skill);

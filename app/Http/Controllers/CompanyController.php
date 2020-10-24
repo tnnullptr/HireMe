@@ -51,7 +51,6 @@ class CompanyController extends Controller {
                 'priority' => $i,
                 'skill_type'=>$skills[$i-1]
             ]);
-
         }
 
         return $this->index();
@@ -79,7 +78,7 @@ class CompanyController extends Controller {
 
         return view('company.home')
             ->with('jobs', $jobs)
-            ->with('admin',Gate::check('is-admin'))
+            ->with('admin',Gate::check('is-admin')?1:0)
             ->with('skill',$skills);
     }
 }
