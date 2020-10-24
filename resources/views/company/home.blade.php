@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <a href="{{route('company.job.add')}}" class="btn btn-success">Add Skill</a>
+                        <a href="{{route('company.job.add')}}" class="btn btn-success">Add Job</a>
                     @foreach($jobs as $job)
                         <Job
                             jobs="{{$job}}"
