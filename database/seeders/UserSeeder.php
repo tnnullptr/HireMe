@@ -20,6 +20,10 @@ class UserSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('adminadmin'),
             'api_token' => Str::random(60),
+            'type'=> 'ADMIN'
         ]);
+        /* Type
+         *   ADMIN,USER,COMPANY
+         * */
     }
 }
