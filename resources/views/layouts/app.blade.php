@@ -51,7 +51,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ Auth::user()->name }} ({{Auth::user()->type}})
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -59,10 +59,13 @@
                                         Home
                                     </a>
                                     @if(Gate::check('is-admin'))
-                                    <a class="dropdown-item" href="{{ route('admin.home') }}">
-                                        Admin
-                                    </a>
+                                        <a class="dropdown-item" href="{{ route('admin.home') }}">
+                                            Admin
+                                        </a>
                                     @endif
+                                    <a class="dropdown-item" href="{{ route('personal.home') }}">
+                                        Personal
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
