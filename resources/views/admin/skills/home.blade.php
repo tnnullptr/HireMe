@@ -23,7 +23,7 @@
                         </ul>
                             @foreach($skills as $skill)
                                 <Skill skill="{{$skill}}"
-                                       :admin="true"
+                                       :admin="{{$admin}}"
                                        accept-endpoint="{{route('admin.skills.action.add')}}"
                                 ></Skill>
                             @endforeach

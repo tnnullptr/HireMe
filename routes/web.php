@@ -26,8 +26,12 @@ Route::get('/admin/skills', [App\Http\Controllers\AdminController::class, 'skill
 Route::get('/skills/add', function () {
     return view('admin.skills.add');
 })->name('admin.skills.add');
+
 Route::post('/admin/skills/accept', [App\Http\Controllers\AdminController::class, 'skill_accept'])->name('admin.skills.accept');
 Route::post('/skills/add', [App\Http\Controllers\AdminController::class, 'skill_add'])->name('admin.skills.action.add');
 
 Route::get('/personal', [App\Http\Controllers\PersonalController::class, 'index'])->name('personal.home');
 Route::post('/personal/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
+
+Route::get('/company', [App\Http\Controllers\CompanyController::class, 'index'])->name('company.home');
+//Route::post('/company/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
