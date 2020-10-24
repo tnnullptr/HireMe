@@ -37,7 +37,7 @@ export default {
     props: ['skill','admin','accept-endpoint'],
     mounted() {
         this.skill2 = JSON.parse(this.skill);
-        window.alert(this.skill2)
+        ///window.alert(this.skill2)
     },
     data(){
         return {

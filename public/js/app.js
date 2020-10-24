@@ -1945,8 +1945,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "Skill",
   props: ['skill', 'admin', 'accept-endpoint'],
   mounted: function mounted() {
-    this.skill2 = JSON.parse(this.skill);
-    window.alert(this.skill2);
+    this.skill2 = JSON.parse(this.skill); ///window.alert(this.skill2)
   },
   data: function data() {
     return {
@@ -37600,70 +37599,63 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "collapse",
-        attrs: { id: "collapse_skill_" + _vm.skill2.id }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _vm.admin
-            ? _c(
-                "div",
-                { staticClass: "btn-group w-100", attrs: { role: "group" } },
-                [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      attrs: { type: "button", "data-status": "1" },
-                      on: {
-                        click: function($event) {
-                          return _vm.accept($event)
-                        }
+    _c("div", [
+      _c("div", { staticClass: "form-group" }, [
+        _vm.admin
+          ? _c(
+              "div",
+              { staticClass: "btn-group w-100", attrs: { role: "group" } },
+              [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success",
+                    attrs: { type: "button", "data-status": "1" },
+                    on: {
+                      click: function($event) {
+                        return _vm.accept($event)
                       }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-check-circle ",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Verified Skill Type"
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      attrs: { type: "button", "data-status": "0" },
-                      on: {
-                        click: function($event) {
-                          return _vm.accept($event)
-                        }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fa fa-check-circle ",
+                      attrs: {
+                        "data-toggle": "tooltip",
+                        "data-placement": "top",
+                        title: "Verified Skill Type"
                       }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-times-circle ",
-                        attrs: {
-                          "data-toggle": "tooltip",
-                          "data-placement": "top",
-                          title: "Rejected Skill Type"
-                        }
-                      })
-                    ]
-                  )
-                ]
-              )
-            : _vm._e()
-        ])
-      ]
-    ),
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    attrs: { type: "button", "data-status": "0" },
+                    on: {
+                      click: function($event) {
+                        return _vm.accept($event)
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fa fa-times-circle ",
+                      attrs: {
+                        "data-toggle": "tooltip",
+                        "data-placement": "top",
+                        title: "Rejected Skill Type"
+                      }
+                    })
+                  ]
+                )
+              ]
+            )
+          : _vm._e()
+      ])
+    ]),
     _vm._v(" "),
     _c("br")
   ])
