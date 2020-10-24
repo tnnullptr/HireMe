@@ -26,4 +26,4 @@ Route::get('/admin/skills', [App\Http\Controllers\AdminController::class, 'skill
 Route::post('/admin/skills/accept', [App\Http\Controllers\AdminController::class, 'skill_accept'])->name('admin.skills.accept');
 
 Route::get('/personal', [App\Http\Controllers\PersonalController::class, 'index'])->name('personal.home');
-Route::get('/personal/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
+Route::post('/personal/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');
