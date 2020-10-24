@@ -50,7 +50,7 @@ export default {
             axios.post(that.acceptEndpoint, {
                 'status': Number(e.currentTarget.dataset.status),
                 'title':e.currentTarget.dataset.title,
-                'id': that.skill.id
+                'id': that.skill2.id
             }).then((res) => {
                 //console.table(res.data)
                 console.log("Saved Update")

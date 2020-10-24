@@ -24,6 +24,9 @@
                         </div>
                     </div>
                     @endforeach
+                    @if(sizeof($Jobs)==0)
+                        No jobs available
+                    @endif
                 </div>
             </div>
         </div>
