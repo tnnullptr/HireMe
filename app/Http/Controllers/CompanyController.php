@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobSkill;
 use App\Models\Skill;
 use Illuminate\Http\Request;
 use App\Models\SkillType;
@@ -22,6 +23,7 @@ class CompanyController extends Controller {
 
         $loc    = $request->input("location");
         $type    = $request->input("type");
+        $skill   = $request->input('skill');
 
         $job = new Job;
         $job->name = $name;
@@ -31,13 +33,37 @@ class CompanyController extends Controller {
         $job->company_id = Auth::user()->id;
         $job->save();
 
+        $job_skill = new JobSkill;
+        $job_skill->job_id = $job->id;
+        $job_skill->skill_type = $skill;
+        $job_skill->save();
+
         return $this->index();
+    }
+
+    public function jobAddUI(){
+        $skill_types = SkillType::all();
+        return view('company.add')
+            ->with('skills', $skill_types);
     }
 
     public function index() {
         $jobs = Job::where('company_id',Auth::user()->id)->get();
+
+        $skills = [];
+        foreach ($jobs as $job){
+            $_ = [];
+            $a =JobSkill::where('job_id',$job->id)->get();
+            foreach($a as $__){
+                array_push($_,$__->skill_type);
+            }
+            $skills[$job->id] = $_;
+        }
+
+
         return view('company.home')
             ->with('jobs', $jobs)
-            ->with('admin',Gate::check('is-admin'));
+            ->with('admin',Gate::check('is-admin'))
+            ->with('skill',$skills);
     }
 }

@@ -12,13 +12,13 @@
         <div >
             <div class="form-group">
                 <div class="btn-group w-100" v-if="admin" role="group">
-                    <button type="button" data-status="1" @click="accept($event)" class="btn btn-success">
+                    <button type="button" data-status="1" :data-title="skill2.title" @click="accept($event)" class="btn btn-success">
                         <i class="fa fa-check-circle "
                            data-toggle="tooltip" data-placement="top"
                            title="Verified Skill Type"
                         ></i>
                     </button>
-                    <button type="button" data-status="0" @click="accept($event)" class="btn btn-danger">
+                    <button type="button" data-status="0" :data-title="skill2.title" @click="accept($event)" class="btn btn-danger">
                         <i class="fa fa-times-circle "
                            data-toggle="tooltip" data-placement="top"
                            title="Rejected Skill Type"
@@ -37,7 +37,7 @@ export default {
     props: ['skill','admin','accept-endpoint'],
     mounted() {
         this.skill2 = JSON.parse(this.skill);
-        ///window.alert(this.skill2)
+        //window.alert(this.skill2)
     },
     data(){
         return {
@@ -49,6 +49,7 @@ export default {
             var that = this
             axios.post(that.acceptEndpoint, {
                 'status': Number(e.currentTarget.dataset.status),
+                'title':e.currentTarget.dataset.title,
                 'id': that.skill.id
             }).then((res) => {
                 //console.table(res.data)

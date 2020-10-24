@@ -18,6 +18,7 @@ class AdminController extends Controller
     public function skill_accept(Request $request)
     {
         $status = $request->input("status");
+        $title  = $request->input("title");
         filter_var($status, FILTER_VALIDATE_BOOLEAN);
         $id = $request->input('id');
 
@@ -26,6 +27,7 @@ class AdminController extends Controller
                 ->updateOrInsert([
                     'id' => $id
                 ], [
+                    'title'=>$title,
                     'verified' => $status
                 ]);
             return response()->json([

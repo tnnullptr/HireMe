@@ -24,7 +24,7 @@
                             @foreach($skills as $skill)
                                 <Skill skill="{{$skill}}"
                                        :admin="{{$admin}}"
-                                       accept-endpoint="{{route('admin.skills.action.add')}}"
+                                       accept-endpoint="{{route('admin.skills.accept')}}"
                                 ></Skill>
                             @endforeach
                     </div>

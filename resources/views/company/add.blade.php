@@ -40,6 +40,14 @@
                                 </select>
                             </div>
 
+                            <div class="form-group">
+                                <label for="skill_lb">所需能力</label>
+                                <select class="form-control" id="skill_lb" name="skill">
+                                    @foreach($skills as $skill)
+                                        <option value="{{$skill->id}}" selected>{{$skill->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                             <input type="submit" id="btn_submit" class="btn btn-info">
                         </form>
                 </div>

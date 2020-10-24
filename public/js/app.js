@@ -1923,13 +1923,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Job",
-  props: ['jobs', 'admin'],
+  props: ['jobs', 'admin', 'skill'],
   mounted: function mounted() {
     this.job2 = JSON.parse(this.jobs);
+    this.skills = JSON.parse(this.skill);
   },
   data: function data() {
     return {
-      'job2': {}
+      'job2': {},
+      'skills': []
     };
   },
   methods: {
@@ -1998,7 +2000,7 @@ __webpack_require__.r(__webpack_exports__);
   name: "Skill",
   props: ['skill', 'admin', 'accept-endpoint'],
   mounted: function mounted() {
-    this.skill2 = JSON.parse(this.skill); ///window.alert(this.skill2)
+    this.skill2 = JSON.parse(this.skill); //window.alert(this.skill2)
   },
   data: function data() {
     return {
@@ -2010,6 +2012,7 @@ __webpack_require__.r(__webpack_exports__);
       var that = this;
       axios.post(that.acceptEndpoint, {
         'status': Number(e.currentTarget.dataset.status),
+        'title': e.currentTarget.dataset.title,
         'id': that.skill.id
       }).then(function (res) {
         //console.table(res.data)
@@ -37632,6 +37635,11 @@ var render = function() {
       _c("p", { staticClass: "card-text" }, [
         _c("i", { staticClass: "fa fa-bookmark" }),
         _vm._v(": " + _vm._s(_vm.job2.type) + " ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _c("i", { staticClass: "fa fa-bookmark" }),
+        _vm._v(": " + _vm._s(_vm.skills) + " ")
       ])
     ])
   ])
@@ -37706,7 +37714,11 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-success",
-                    attrs: { type: "button", "data-status": "1" },
+                    attrs: {
+                      type: "button",
+                      "data-status": "1",
+                      "data-title": _vm.skill2.title
+                    },
                     on: {
                       click: function($event) {
                         return _vm.accept($event)
@@ -37729,7 +37741,11 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btn-danger",
-                    attrs: { type: "button", "data-status": "0" },
+                    attrs: {
+                      type: "button",
+                      "data-status": "0",
+                      "data-title": _vm.skill2.title
+                    },
                     on: {
                       click: function($event) {
                         return _vm.accept($event)

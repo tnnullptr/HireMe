@@ -5,7 +5,7 @@
             <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{job2.salary}}</h6>
             <p class="card-text"><i class="fa fa-location-arrow"></i>: {{job2.location}} </p>
             <p class="card-text"><i class="fa fa-bookmark"></i>: {{job2.type}} </p>
-
+            <p class="card-text"><i class="fa fa-bookmark"></i>: {{skills}} </p>
 
         </div>
     </div>
@@ -14,13 +14,15 @@
 <script>
 export default {
     name: "Job",
-    props: ['jobs','admin'],
+    props: ['jobs','admin','skill'],
     mounted() {
         this.job2 = JSON.parse(this.jobs);
+        this.skills = JSON.parse(this.skill);
     },
     data(){
         return {
-            'job2':{}
+            'job2':{},
+            'skills':[]
         }
     },
     methods:{

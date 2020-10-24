@@ -18,6 +18,7 @@
                         <Job
                             jobs="{{$job}}"
                             :admin="{{$admin}}"
+                            skill="{{json_encode($skill[$job->id])}}"
                         ></Job>
                     @endforeach
 
