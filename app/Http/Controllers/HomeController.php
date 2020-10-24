@@ -81,7 +81,7 @@ class HomeController extends Controller
             array_push($nnSE,$job2info[$job['id']]);
         }
 
-        var_dump($nnSE);
+        //var_dump($nnSE);
         $AD = [];
         foreach($hsinchu_work as $work){
             $t = new Job;

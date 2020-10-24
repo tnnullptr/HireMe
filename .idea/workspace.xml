@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JobSkill.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JobSkill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_095606_create_job_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_24_095606_create_job_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_24_100136_create_job_skills_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_24_100136_create_job_skills_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Job.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Job.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/company/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company/add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +209,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603501917860</updated>
-      <workItem from="1603501919811" duration="43271000" />
+      <workItem from="1603501919811" duration="43764000" />
     </task>
     <task id="LOCAL-00001" summary="[Init] Initialize project structure.">
       <created>1603502880775</created>
@@ -409,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603543997815</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update">
+      <created>1603558224239</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603558224239</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
