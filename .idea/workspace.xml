@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +208,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603501917860</updated>
-      <workItem from="1603501919811" duration="44832000" />
+      <workItem from="1603501919811" duration="45761000" />
     </task>
     <task id="LOCAL-00001" summary="[Init] Initialize project structure.">
       <created>1603502880775</created>
@@ -419,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603559456020</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update">
+      <created>1603559949416</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1603559949416</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,10 +453,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603553166949">
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603559729686">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603553166949" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603559729686" />
     <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603541172545">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -461,22 +469,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603504281185" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1603544474980">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1603559784507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603544474980" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1603544474980">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603559784507" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1603559784507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603544474980" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1603544474980">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603559784507" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1603559784507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603544474980" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1603544474980">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603559784507" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1603559784507">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603544474980" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603559784507" />
     <state x="477" y="42" key="RollbackChangesDialog" timestamp="1603519925190">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -485,9 +493,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603501948165" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603559458848">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603559952219">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603559458848" />
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603559952219" />
   </component>
 </project>

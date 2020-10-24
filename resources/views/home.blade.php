@@ -19,7 +19,7 @@
                             <h5 class="card-title">{{$job['name']}}</h5>
                             <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{$job['salary']}}</h6>
                             <p class="card-text"><i class="fa fa-location-arrow"></i> {{$job['location']}} </p>
-                            <p class="card-text"><i class="fa fa-bookmark"></i> {{$job['type'] | }} </p>
+                            <p class="card-text"><i class="fa fa-bookmark"></i> {{$job['type'] }} </p>
                             <p class="card-text">{{$job['context']}} </p>
                         </div>
                     </div>
