@@ -9,7 +9,7 @@
                data-toggle="tooltip" data-placement="top" title="Rejected Skill Type"
                v-else-if="skill2.verified === 0"></i>
         </li>
-        <div :id="'collapse_skill_'+skill2.id" class="collapse">
+        <div >
             <div class="form-group">
                 <div class="btn-group w-100" v-if="admin" role="group">
                     <button type="button" data-status="1" @click="accept($event)" class="btn btn-success">
