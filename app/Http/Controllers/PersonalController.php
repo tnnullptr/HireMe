@@ -15,6 +15,7 @@ class PersonalController extends Controller
         $skill4 = $request->input('skill_4');
         $skill5 = $request->input('skill_5');
 
+
     }
 
     public function index(){
