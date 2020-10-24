@@ -1945,7 +1945,13 @@ __webpack_require__.r(__webpack_exports__);
   name: "Skill",
   props: ['skill', 'admin', 'accept-endpoint'],
   mounted: function mounted() {
-    this.skill = JSON.parse(this.skill); //window.alert(this.amendment.role)
+    this.skill2 = JSON.parse(this.skill);
+    window.alert(this.skill2);
+  },
+  data: function data() {
+    return {
+      'skill2': {}
+    };
   },
   methods: {
     accept: function accept(e) {
@@ -37562,17 +37568,17 @@ var render = function() {
       "li",
       {
         staticClass: "list-group-item",
-        attrs: { "data-target": "#collapse_skill_" + _vm.skill.id }
+        attrs: { "data-target": "#collapse_skill_" + _vm.skill2.id }
       },
       [
         _vm._v(
           "\n        (" +
-            _vm._s(_vm.skill.id) +
+            _vm._s(_vm.skill2.id) +
             ") " +
-            _vm._s(_vm.skill.title) +
+            _vm._s(_vm.skill2.title) +
             "\n        "
         ),
-        _vm.skill.verified === 1
+        _vm.skill2.verified === 1
           ? _c("i", {
               staticClass: "fa fa-check-circle text-success",
               attrs: {
@@ -37581,7 +37587,7 @@ var render = function() {
                 title: "Verified Skill Type"
               }
             })
-          : _vm.skill.verified === 0
+          : _vm.skill2.verified === 0
           ? _c("i", {
               staticClass: "fa fa-times-circle text-danger",
               attrs: {
@@ -37594,63 +37600,70 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("div", [
-      _c("div", { staticClass: "form-group" }, [
-        _vm.admin
-          ? _c(
-              "div",
-              { staticClass: "btn-group w-100", attrs: { role: "group" } },
-              [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-success",
-                    attrs: { type: "button", "data-status": "1" },
-                    on: {
-                      click: function($event) {
-                        return _vm.accept($event)
+    _c(
+      "div",
+      {
+        staticClass: "collapse",
+        attrs: { id: "collapse_skill_" + _vm.skill2.id }
+      },
+      [
+        _c("div", { staticClass: "form-group" }, [
+          _vm.admin
+            ? _c(
+                "div",
+                { staticClass: "btn-group w-100", attrs: { role: "group" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success",
+                      attrs: { type: "button", "data-status": "1" },
+                      on: {
+                        click: function($event) {
+                          return _vm.accept($event)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-check-circle ",
-                      attrs: {
-                        "data-toggle": "tooltip",
-                        "data-placement": "top",
-                        title: "Verified Skill Type"
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fa fa-check-circle ",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Verified Skill Type"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger",
+                      attrs: { type: "button", "data-status": "0" },
+                      on: {
+                        click: function($event) {
+                          return _vm.accept($event)
+                        }
                       }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-danger",
-                    attrs: { type: "button", "data-status": "0" },
-                    on: {
-                      click: function($event) {
-                        return _vm.accept($event)
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-times-circle ",
-                      attrs: {
-                        "data-toggle": "tooltip",
-                        "data-placement": "top",
-                        title: "Rejected Skill Type"
-                      }
-                    })
-                  ]
-                )
-              ]
-            )
-          : _vm._e()
-      ])
-    ]),
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fa fa-times-circle ",
+                        attrs: {
+                          "data-toggle": "tooltip",
+                          "data-placement": "top",
+                          title: "Rejected Skill Type"
+                        }
+                      })
+                    ]
+                  )
+                ]
+              )
+            : _vm._e()
+        ])
+      ]
+    ),
     _vm._v(" "),
     _c("br")
   ])

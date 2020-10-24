@@ -15,18 +15,14 @@
                         @endif
 
                         Hello, admin
-
-                            <br>
-                            <a href="{{route('admin.skills.add')}}" class="btn btn-success">Add Skill</a>
-                        <ul class="list-group">
-
-                        </ul>
-                            @foreach($skills as $skill)
-                                <Skill skill="{{$skill}}"
-                                       :admin="true"
-                                       accept-endpoint="{{route('admin.skills.action.add')}}"
-                                ></Skill>
-                            @endforeach
+                            <form method="POST" action="{{route('admin.skills.action.add')}}">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="title">Skill Title</label>
+                                    <input id="title" type="text" name="title">
+                                </div>
+                                <input type="submit" id="btn_submit" class="btn btn-info">
+                            </form>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.home');
 Route::get('/admin/skills', [App\Http\Controllers\AdminController::class, 'skill'])->name('admin.skills.home');
+Route::get('/skills/add', function () {
+    return view('admin.skills.add');
+})->name('admin.skills.add');
 Route::post('/admin/skills/accept', [App\Http\Controllers\AdminController::class, 'skill_accept'])->name('admin.skills.accept');
+Route::post('/skills/add', [App\Http\Controllers\AdminController::class, 'skill_add'])->name('admin.skills.action.add');
 
 Route::get('/personal', [App\Http\Controllers\PersonalController::class, 'index'])->name('personal.home');
 Route::post('/personal/setSkill', [App\Http\Controllers\PersonalController::class, 'set_skill'])->name('personal.setSkill');

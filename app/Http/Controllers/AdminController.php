@@ -41,6 +41,23 @@ class AdminController extends Controller
         }
     }
 
+    public function skill_add(Request $request)
+    {
+        $title = $request->input("title");
+        $skill = new SkillType;
+        if (Gate::check('is-admin')) {
+            $skill->title = $title;
+            $skill->verified = true;
+            $skill->save();
+            return $this->index();
+        }else{
+            $skill->title = $title;
+            $skill->verified = false;
+            $skill->save();
+            return $this->skill();
+        }
+    }
+
     public function skill()
     {
         $skills = SkillType::all();
@@ -51,7 +68,6 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.home')
-            ->with('');
+        return view('admin.home');
     }
 }

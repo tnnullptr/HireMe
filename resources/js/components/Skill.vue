@@ -1,15 +1,15 @@
 <template>
     <div>
-        <li class="list-group-item" :data-target="'#collapse_skill_'+skill.id">
-            ({{skill.id}}) {{skill.title}}
+        <li class="list-group-item" :data-target="'#collapse_skill_'+skill2.id">
+            ({{skill2.id}}) {{skill2.title}}
             <i class="fa fa-check-circle text-success"
                data-toggle="tooltip" data-placement="top" title="Verified Skill Type"
-               v-if="skill.verified === 1"></i>
+               v-if="skill2.verified === 1"></i>
             <i class="fa fa-times-circle text-danger"
                data-toggle="tooltip" data-placement="top" title="Rejected Skill Type"
-               v-else-if="skill.verified === 0"></i>
+               v-else-if="skill2.verified === 0"></i>
         </li>
-        <div>
+        <div :id="'collapse_skill_'+skill2.id" class="collapse">
             <div class="form-group">
                 <div class="btn-group w-100" v-if="admin" role="group">
                     <button type="button" data-status="1" @click="accept($event)" class="btn btn-success">
@@ -36,8 +36,13 @@ export default {
     name: "Skill",
     props: ['skill','admin','accept-endpoint'],
     mounted() {
-        this.skill = JSON.parse(this.skill);
-        //window.alert(this.amendment.role)
+        this.skill2 = JSON.parse(this.skill);
+        window.alert(this.skill2)
+    },
+    data(){
+        return {
+            'skill2':{}
+        }
     },
     methods:{
         accept(e){
