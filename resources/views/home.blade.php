@@ -13,8 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
+                    @foreach($Jobs as $job)
+                    <div class="card w-100">
+                        {{$job['name']}}
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

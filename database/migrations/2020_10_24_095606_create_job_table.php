@@ -24,6 +24,7 @@ class CreateJobTable extends Migration
 
             //Type: PARTTIME , FULLTIME
             $table->string('type');
+            $table->string('context');
 
             $table->timestamps();
         });

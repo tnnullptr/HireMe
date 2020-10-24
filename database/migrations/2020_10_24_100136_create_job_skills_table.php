@@ -17,7 +17,7 @@ class CreateJobSkillsTable extends Migration
             $table->id();
             $table->integer('job_id');
             $table->integer('skill_type');
-
+            $table->integer('priority');
             $table->timestamps();
         });
     }

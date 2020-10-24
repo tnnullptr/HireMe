@@ -23,7 +23,7 @@ class CompanyController extends Controller {
 
         $loc    = $request->input("location");
         $type    = $request->input("type");
-        $skill   = $request->input('skill');
+        $context    = $request->input("context");
 
         $job = new Job;
         $job->name = $name;
@@ -31,12 +31,28 @@ class CompanyController extends Controller {
         $job->location = $loc;
         $job->type = $type;
         $job->company_id = Auth::user()->id;
+        $job->context = $context;
         $job->save();
 
-        $job_skill = new JobSkill;
-        $job_skill->job_id = $job->id;
-        $job_skill->skill_type = $skill;
-        $job_skill->save();
+        $skills = [
+            $request->input('skill_1'),
+            $request->input('skill_2'),
+            $request->input('skill_3'),
+            $request->input('skill_4'),
+            $request->input('skill_5'),
+        ];
+
+        foreach (range(1, 5) as $i) {
+            JobSkill::updateOrInsert([
+                'job_id' => $job->id,
+                'priority' => $i
+            ], [
+                'job_id' => $job->id,
+                'priority' => $i,
+                'skill_type'=>$skills[$i-1]
+            ]);
+
+        }
 
         return $this->index();
     }

@@ -5,6 +5,7 @@
             <h6 class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i>: {{job2.salary}}</h6>
             <p class="card-text"><i class="fa fa-location-arrow"></i>: {{job2.location}} </p>
             <p class="card-text"><i class="fa fa-bookmark"></i>: {{job2.type}} </p>
+            <p class="card-text">{{job2.context}} </p>
             <p class="card-text"><i class="fa fa-bookmark"></i>: {{skills}} </p>
 
         </div>

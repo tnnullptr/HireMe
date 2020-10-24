@@ -10,6 +10,7 @@ class JobSkill extends Model
     use HasFactory;
     protected $fillable = [
         'job_id',
-        'skill_type'
+        'skill_type',
+        'priority'
     ];
 }

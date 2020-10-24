@@ -14,6 +14,7 @@ class Job extends Model
         'salary',
         'company_id',
         'location',
-        'type'
+        'type',
+        'context'
     ];
 }
