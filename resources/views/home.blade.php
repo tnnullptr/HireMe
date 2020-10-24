@@ -32,6 +32,7 @@
                                     <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
                                 </div>
                             </div>
+                            <br>
                         @endforeach
                         @if(sizeof($Jobs)==0)
                             No jobs available
@@ -47,7 +48,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-money"></i> {{$job['salary']}}</p>
+                                            class="fa fa-money"></i> </p>
                                     <p class="card-subtitle mb-2 text-muted"><i
                                             class="fa fa-location-arrow"></i> {{$job['工作地點']}} </p>
                                     <p class="card-subtitle mb-2 text-muted"><i
@@ -56,6 +57,7 @@
                                     <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
                                 </div>
                             </div>
+                            <br>
                         @endforeach
                     </div>
                 </div>
