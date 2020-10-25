@@ -19,6 +19,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="icon" type="image/png" href="{{asset('icon.png')}}">
+    @yield('styles')
 </head>
 <body>
     <div id="app">
@@ -101,5 +102,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
 </body>
 </html>
