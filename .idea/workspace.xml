@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/icon-web.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/company/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/company/add.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,14 +227,8 @@
       <option name="presentableId" value="Default" />
       <updated>1603501917860</updated>
       <workItem from="1603501919811" duration="51449000" />
-      <workItem from="1603581811860" duration="18356000" />
-    </task>
-    <task id="LOCAL-00008" summary="[Add] Add checking admin middleware.">
-      <created>1603511412105</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1603511412105</updated>
+      <workItem from="1603581811860" duration="21253000" />
+      <workItem from="1603606048339" duration="76000" />
     </task>
     <task id="LOCAL-00009" summary="[Add] Add checking admin middleware.">
       <created>1603511421098</created>
@@ -574,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603600465139</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Update">
+      <created>1603602374322</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1603602374322</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,6 +589,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -623,42 +623,42 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603586217110" />
-    <state x="100" y="100" width="1080" height="480" key="DiffContextDialog" timestamp="1603519974204">
+    <state x="100" y="100" width="1080" height="480" key="DiffContextDialog" timestamp="1603606103290">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="100" y="100" width="1080" height="480" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1603519974204" />
+    <state x="100" y="100" width="1080" height="480" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1603606103290" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603504281185">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603504281185" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1603600234692">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1603605769621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603600234692" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1603600234692">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603605769621" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1603605769621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603600234692" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1603600234692">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603605769621" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1603605769620">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603600234692" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1603600234692">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603605769620" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1603605769621">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603600234692" />
-    <state x="477" y="42" key="RollbackChangesDialog" timestamp="1603519925190">
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603605769621" />
+    <state x="477" y="42" key="RollbackChangesDialog" timestamp="1603606087562">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="42" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603519925190" />
+    <state x="477" y="42" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603606087562" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1603501948165">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603501948165" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603600472267">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603602377526">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603600472267" />
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603602377526" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603599175360">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -17,11 +17,11 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name">Job Name</label>
-                                <input id="name" type="text" name="name">
+                                <input id="name" type="text" name="name" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="salary">Salary/hr</label>
-                                <select name="salary">
+                                <select name="salary" class="form-control">
                                     <option value="0~100">0~100</option>
                                     <option value="100~200">100~200</option>
                                     <option value="200~300">200~300</option>
@@ -30,18 +30,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="location">Location</label>
-                                <input id="location" type="text" name="location">
+                                <input id="location" type="text" name="location" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="type">Type</label>
-                                <select name="type">
+                                <select name="type" class="form-control">
                                     <option value="PARTTIME">兼職</option>
                                     <option value="FULLTIME">全職</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="context">簡介</label>
-                                <textarea name="context" id="context"></textarea>
+                                <textarea name="context" id="context" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="skill_lb_1">能力第一順位</label>
