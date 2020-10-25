@@ -14,8 +14,9 @@
                             </div>
                         @endif
 
-                        Hello, admin
-                        <a href="{{route('admin.skills.home')}}">Skills List</a>
+                        Hello, admin<br>
+                        <a href="{{route('admin.skills.home')}}">Skills List</a><br>
+                        <a href="{{route('admin.covid19.home')}}">COVID19 Document List</a>
                     </div>
                 </div>
             </div>

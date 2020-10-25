@@ -27,6 +27,8 @@ Route::get('/skills/add', function () {
     return view('admin.skills.add');
 })->name('admin.skills.add');
 
+Route::get('/admin/covid19', [App\Http\Controllers\AdminController::class, 'covid19'])->name('admin.covid19.home');
+Route::post('/admin/covid19/accept', [App\Http\Controllers\AdminController::class, 'covid19_accept'])->name('admin.covid19.accept');
 Route::post('/admin/skills/accept', [App\Http\Controllers\AdminController::class, 'skill_accept'])->name('admin.skills.accept');
 Route::post('/skills/add', [App\Http\Controllers\AdminController::class, 'skill_add'])->name('admin.skills.action.add');
 

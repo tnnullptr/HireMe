@@ -22,6 +22,7 @@ window.Vue = require('vue');
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('Skill',require('./components/Skill.vue').default);
 Vue.component('Job',require('./components/Job.vue').default);
+Vue.component('Covid19',require('./components/COVID19.vue').default);
 
 
 /**
