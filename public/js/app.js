@@ -1935,9 +1935,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Covid19",
-  props: ['covid', 'id', 'accept-endpoint'],
+  props: ['covid', 'id', 'accept-endpoint', 'is-covid'],
   mounted: function mounted() {},
   data: function data() {
     return {};
@@ -37688,8 +37695,28 @@ var render = function() {
   return _c("div", [
     _c("li", { staticClass: "list-group-item" }, [
       _c("a", { attrs: { href: _vm.covid } }, [
-        _vm._v(_vm._s(_vm.id) + " 證明文件")
-      ])
+        _vm._v("(" + _vm._s(_vm.id) + ") 證明文件")
+      ]),
+      _vm._v(" "),
+      _vm.isCovid === 1
+        ? _c("i", {
+            staticClass: "fa fa-check-circle text-success",
+            attrs: {
+              "data-toggle": "tooltip",
+              "data-placement": "top",
+              title: "Verified COVID19 Influenced Person"
+            }
+          })
+        : _vm.isCovid === 0
+        ? _c("i", {
+            staticClass: "fa fa-times-circle text-danger",
+            attrs: {
+              "data-toggle": "tooltip",
+              "data-placement": "top",
+              title: "Unverified COVID19 Influenced Person"
+            }
+          })
+        : _vm._e()
     ]),
     _vm._v(" "),
     _c("div", [
@@ -37738,7 +37765,7 @@ var render = function() {
                   attrs: {
                     "data-toggle": "tooltip",
                     "data-placement": "top",
-                    title: "Rejected COVID19 Influenced Person"
+                    title: "Unverified COVID19 Influenced Person"
                   }
                 })
               ]

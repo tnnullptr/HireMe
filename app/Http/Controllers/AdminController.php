@@ -63,7 +63,7 @@ class AdminController extends Controller
         $files = [];
         foreach(range(1,User::all()->count()) as $i){
             if(Storage::exists('covid19/'.$i)){
-                array_push($files,[$i,Storage::url('covid19/'.$i)]);
+                array_push($files,[$i,Storage::url('covid19/'.$i),User::find($i)->covid19]);
             }
         }
 

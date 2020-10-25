@@ -1,7 +1,14 @@
 <template>
     <div>
         <li class="list-group-item" >
-            <a :href="covid" >{{id}} 證明文件</a>
+            <a :href="covid" >({{id}}) 證明文件</a>
+
+            <i class="fa fa-check-circle text-success"
+               data-toggle="tooltip" data-placement="top" title="Verified COVID19 Influenced Person"
+               v-if="isCovid === 1"></i>
+            <i class="fa fa-times-circle text-danger"
+               data-toggle="tooltip" data-placement="top" title="Unverified COVID19 Influenced Person"
+               v-else-if="isCovid === 0"></i>
         </li>
         <div >
             <div class="form-group">
@@ -15,7 +22,7 @@
                     <button type="button" data-status="0" @click="accept($event)" class="btn btn-danger">
                         <i class="fa fa-times-circle "
                            data-toggle="tooltip" data-placement="top"
-                           title="Rejected COVID19 Influenced Person"
+                           title="Unverified COVID19 Influenced Person"
                         ></i>
                     </button>
                 </div>
@@ -28,7 +35,7 @@
 <script>
 export default {
     name: "Covid19",
-    props: ['covid','id','accept-endpoint'],
+    props: ['covid','id','accept-endpoint','is-covid'],
     mounted() {
 
     },

@@ -13,19 +13,15 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        Hello, admin
-
-                            <br>
-                           <ul class="list-group">
-                               @foreach($files as $file)
-                                   <Covid19 covid="{{$file[1]}}"
-                                          id="{{$file[0]}}"
-                                          accept-endpoint="{{route('admin.covid19.accept')}}"
-                                   ></Covid19>
-                               @endforeach
+                        <ul class="list-group">
+                            @foreach($files as $file)
+                                <Covid19 covid="{{$file[1]}}"
+                                         id="{{$file[0]}}"
+                                         :is-covid="{{$file[2]}}"
+                                         accept-endpoint="{{route('admin.covid19.accept')}}"
+                                ></Covid19>
+                            @endforeach
                         </ul>
-
                     </div>
                 </div>
             </div>
