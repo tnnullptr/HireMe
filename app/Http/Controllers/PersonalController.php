@@ -6,6 +6,7 @@ use App\Models\Skill;
 use Illuminate\Http\Request;
 use App\Models\SkillType;
 use Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PersonalController extends Controller {
     public function set_skill(Request $request) {
@@ -28,6 +29,12 @@ class PersonalController extends Controller {
             ]);
 
         }
+
+        $path = $request->file('covid19_doc')->storeAs(
+            'covid19', $request->user()->id,
+            ['disk' => 'public']
+        );
+
         return $this->index();
     }
 
@@ -39,8 +46,15 @@ class PersonalController extends Controller {
         foreach($skill_own as $skill){
             $owning_skill[$skill->priority] = $skill->skill_type;
         }
+
+        $filePath = "";
+        if(Storage::exists('covid19/'.Auth::user()->id)){
+            $filePath = Storage::url('covid19/'.Auth::user()->id);
+        }
+
         return view('personal.home')
             ->with('skills', $skill_types)
-            ->with('personal_skills',$owning_skill);
+            ->with('personal_skills',$owning_skill)
+            ->with('file_path',$filePath);
     }
 }

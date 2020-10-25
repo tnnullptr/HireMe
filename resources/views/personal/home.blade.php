@@ -13,8 +13,8 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        <form method="post" action="{{route('personal.setSkill')}}">
-
+                        <form method="post" enctype="multipart/form-data" action="{{route('personal.setSkill')}}">
+                            @csrf
                             <div class="form-group">
                                 <label for="skill_lb_1">能力第一順位</label>
                                 <select class="form-control" id="skill_lb_1" name="skill_1">
@@ -79,7 +79,14 @@
                                     @endforeach
                                 </select>
                             </div>
-                            {{csrf_field()}}
+
+                            <div class="form-group">
+                                <label for="covid19_doc">COVID-19 證明文件</label>
+                                @if($file_path != "")
+                                (<a href="{{$file_path}}">先前上傳的文件</a>)
+                                @endif
+                                <input type="file" class="form-control-file" id="covid19_doc" name="covid19_doc">
+                            </div>
                             <button type="submit" class="btn btn-success" >Save</button>
                         </form>
                     </div>
