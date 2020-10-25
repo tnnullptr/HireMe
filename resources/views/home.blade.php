@@ -12,33 +12,60 @@
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
                             </div>
-                        @endif
-                        @foreach($Jobs as $job)
-                            <div class="card w-100">
-                                <div class="card-header">
-                                    {{$job['name']}}
+                        @endif4
+
+                        @if($user->type == "USER")
+                            @foreach($Jobs as $job)
+                                <div class="card w-100">
+                                    <div class="card-header">
+                                        {{$job['name']}}
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">{{$job['context']}} </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-money"></i> {{$job['salary']}}</p>
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-location-arrow"></i> {{$job['location']}} </p>
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-bookmark"></i> {{$job['type'] == "PARTTIME" ? "兼職" : ($job['type'] == "FULLTIME" ? "全職" : "政府官方")}}
+                                        </p>
+                                        <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <p class="card-text">{{$job['context']}} </p>
+                                <br>
+                            @endforeach
+                            @if(sizeof($Jobs)==0)
+                                No job available
+                            @endif
+                        @elseif($user->type=="COMPANY")
+                            @foreach($Users as $usr)
+                                <div class="card w-100">
+                                    <div class="card-header">
+                                        {{$usr['name']}}
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">{{$usr['context']}} </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-money"></i> {{$usr['salary']}}</p>
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-location-arrow"></i> {{$usr['location']}} </p>
+                                        <p class="card-subtitle mb-2 text-muted"><i
+                                                class="fa fa-bookmark"></i> {{$usr['type'] == "PARTTIME" ? "兼職" : ($job['type'] == "FULLTIME" ? "全職" : "政府官方")}}
+                                        </p>
+                                        <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
+                                    </div>
                                 </div>
-                                <div class="card-footer">
-                                    <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-money"></i> {{$job['salary']}}</p>
-                                    <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-location-arrow"></i> {{$job['location']}} </p>
-                                    <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-bookmark"></i> {{$job['type'] == "PARTTIME" ? "兼職" : ($job['type'] == "FULLTIME" ? "全職" : "政府官方")}}
-                                    </p>
-                                    <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
-                                </div>
-                            </div>
-                            <br>
-                        @endforeach
-                        @if(sizeof($Jobs)==0)
-                            No jobs available
+                                <br>
+                            @endforeach
+                            @if(sizeof($Users)==0)
+                                No user available
+                            @endif
                         @endif
                         <hr>
-
                         @foreach($Special as $job)
                             <div class="card w-100 border border-success">
                                 <div class="card-header">

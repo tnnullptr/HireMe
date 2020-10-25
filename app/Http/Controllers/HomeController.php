@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\JobSkill;
 use App\Models\Job;
 use App\Models\Skill;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -81,14 +82,15 @@ class HomeController extends Controller
             array_push($nnSE,$job2info[$job['id']]);
         }
 
+        $users = User::where('type','USER')->get();
 
 
-        /*var_dump($newSE);
-        echo "<br>";
-        var_dump($job2info);*/
+
         return view('home')
             ->with('Jobs',$nnSE)
             ->with('Info',$job2info)
-            ->with('Special',$hsinchu_work);
+            ->with('Special',$hsinchu_work)
+            ->with('Users')
+            ->with('user',Auth::user());
     }
 }

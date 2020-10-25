@@ -30,10 +30,13 @@ class PersonalController extends Controller {
 
         }
 
-        $path = $request->file('covid19_doc')->storeAs(
-            'covid19', $request->user()->id,
-            ['disk' => 'public']
-        );
+        $path = "";
+        if($request->file('covid19_doc')) {
+            $path = $request->file('covid19_doc')->storeAs(
+                'covid19', $request->user()->id,
+                ['disk' => 'public']
+            );
+        }
 
         return $this->index();
     }
