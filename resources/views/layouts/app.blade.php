@@ -18,7 +18,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="{{asset('icon.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('icon-web.png')}}">
     @yield('styles')
 </head>
 <body>
