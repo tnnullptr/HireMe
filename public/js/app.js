@@ -37707,7 +37707,9 @@ var render = function() {
               title: "Verified COVID19 Influenced Person"
             }
           })
-        : _vm.isCovid === 0
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.isCovid === 0
         ? _c("i", {
             staticClass: "fa fa-times-circle text-danger",
             attrs: {

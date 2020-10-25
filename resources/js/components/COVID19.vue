@@ -8,7 +8,7 @@
                v-if="isCovid === 1"></i>
             <i class="fa fa-times-circle text-danger"
                data-toggle="tooltip" data-placement="top" title="Unverified COVID19 Influenced Person"
-               v-else-if="isCovid === 0"></i>
+               v-if="isCovid === 0"></i>
         </li>
         <div >
             <div class="form-group">

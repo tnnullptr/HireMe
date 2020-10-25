@@ -93,7 +93,7 @@
                                 @else
                                 <i class="fa fa-times-circle text-danger"
                                    data-toggle="tooltip" data-placement="top" title="Unverified COVID19 Influenced Person"
-                                   v-else-if="isCovid === 0"></i>
+                                   ></i>
                                 @endif
 
                                 <input type="file" class="form-control-file" id="covid19_doc" name="covid19_doc">
