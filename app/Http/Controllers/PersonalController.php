@@ -51,8 +51,8 @@ class PersonalController extends Controller {
         }
 
         $filePath = "";
-        if(Storage::exists('covid19/'.Auth::user()->id)){
-            $filePath = Storage::url('covid19/'.Auth::user()->id);
+        if(Storage::exists('public/covid19/'.Auth::user()->id)){
+            $filePath = Storage::url('public/covid19/'.Auth::user()->id);
         }
 
         return view('personal.home')
