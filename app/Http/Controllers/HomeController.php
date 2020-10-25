@@ -83,14 +83,14 @@ class HomeController extends Controller
         }
 
         $users = User::where('type','USER')->get();
-
+        shuffle($users);
 
 
         return view('home')
             ->with('Jobs',$nnSE)
             ->with('Info',$job2info)
             ->with('Special',$hsinchu_work)
-            ->with('Users')
+            ->with('Users',$users)
             ->with('user',Auth::user());
     }
 }

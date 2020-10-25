@@ -12,7 +12,7 @@
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
                             </div>
-                        @endif4
+                        @endif
 
                         @if($user->type == "USER")
                             @foreach($Jobs as $job)
@@ -43,20 +43,10 @@
                             @foreach($Users as $usr)
                                 <div class="card w-100">
                                     <div class="card-header">
-                                        {{$usr['name']}}
+                                        {{$usr->name}}
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">{{$usr['context']}} </p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <p class="card-subtitle mb-2 text-muted"><i
-                                                class="fa fa-money"></i> {{$usr['salary']}}</p>
-                                        <p class="card-subtitle mb-2 text-muted"><i
-                                                class="fa fa-location-arrow"></i> {{$usr['location']}} </p>
-                                        <p class="card-subtitle mb-2 text-muted"><i
-                                                class="fa fa-bookmark"></i> {{$usr['type'] == "PARTTIME" ? "兼職" : ($job['type'] == "FULLTIME" ? "全職" : "政府官方")}}
-                                        </p>
-                                        <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> </p>-->
+                                        <a href="mailto:{{$usr['email']}}" class="card-subtitle mb-2"><i class="fa fa-mail-forward"></i> {{$usr['email']}}</a>
                                     </div>
                                 </div>
                                 <br>
