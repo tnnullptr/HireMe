@@ -34,7 +34,7 @@
 
 <script>
 export default {
-    name: "covid19",
+    name: "Covid19",
     props: ['covid','id','accept-endpoint','is-covid'],
     mounted() {
 
