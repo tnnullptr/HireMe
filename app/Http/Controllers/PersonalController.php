@@ -33,7 +33,7 @@ class PersonalController extends Controller {
         $path = "";
         if($request->file('covid19_doc')) {
             $path = $request->file('covid19_doc')->storeAs(
-                'covid19', $request->user()->id,
+                'covid19', $request->user()->id.'.pdf',
                 ['disk' => 'public']
             );
         }
@@ -51,8 +51,8 @@ class PersonalController extends Controller {
         }
 
         $filePath = "";
-        if(Storage::exists('public/covid19/'.Auth::user()->id)){
-            $filePath = Storage::url('public/covid19/'.Auth::user()->id);
+        if(Storage::exists('public/covid19/'.Auth::user()->id.'.pdf')){
+            $filePath = Storage::url('public/covid19/'.Auth::user()->id.'.pdf');
         }
 
         return view('personal.home')

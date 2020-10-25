@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PersonalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PersonalController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +228,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603501917860</updated>
       <workItem from="1603501919811" duration="51449000" />
-      <workItem from="1603581811860" duration="13222000" />
-    </task>
-    <task id="LOCAL-00004" summary="[Modify] Create User Model.">
-      <created>1603507820378</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1603507820379</updated>
+      <workItem from="1603581811860" duration="15158000" />
     </task>
     <task id="LOCAL-00005" summary="[Add] Create Skill Model.">
       <created>1603507843404</created>
@@ -571,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603593534687</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Update">
+      <created>1603595250285</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1603595250285</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,10 +654,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603501948165" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603593536780">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603595251298">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603593536780" />
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603595251298" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603594393388">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
