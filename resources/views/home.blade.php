@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        @if($user->type == "USER")
+                        @if($user->type != "COMPANY")
                             @foreach($Jobs as $job)
                                 <div class="card w-100">
                                     <div class="card-header">
@@ -39,7 +39,7 @@
                             @if(sizeof($Jobs)==0)
                                 No job available
                             @endif
-                        @elseif($user->type=="COMPANY")
+                        @elseif($user->type != "USER")
                             @foreach($Users as $usr)
                                 <div class="card w-100">
                                     <div class="card-header">
