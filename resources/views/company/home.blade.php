@@ -20,7 +20,9 @@
                             jobs="{{$job}}"
                             :admin="{{$admin}}"
                             skill="{{json_encode($skill[$job->id])}}"
+                            delete-endpoint="{{route('company.job.action.delete')}}"
                         ></Job>
+                        <br>
                     @endforeach
 
                 </div>

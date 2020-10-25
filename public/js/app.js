@@ -1943,7 +1943,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "covid19",
+  name: "Covid19",
   props: ['covid', 'id', 'accept-endpoint', 'is-covid'],
   mounted: function mounted() {},
   data: function data() {
@@ -1995,9 +1995,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Job",
-  props: ['jobs', 'admin', 'skill'],
+  props: ['jobs', 'admin', 'skill', 'delete-endpoint'],
   mounted: function mounted() {
     this.job2 = JSON.parse(this.jobs);
     this.skills = JSON.parse(this.skill);
@@ -2009,20 +2010,19 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    /*accept(e){
-        var that = this
-        axios.post(that.acceptEndpoint, {
-            'status': Number(e.currentTarget.dataset.status),
-            'id': that.skill.id
-        }).then((res) => {
-            //console.table(res.data)
-            console.log("Saved Update")
-            alert(res.data.msg )
-            location.reload()
-        }).catch((error) => {
-            console.error(error)
-        })
-    }*/
+    deleteJob: function deleteJob() {
+      var that = this;
+      axios.post(that.deleteEndpoint, {
+        'id': that.job2.id
+      }).then(function (res) {
+        //console.table(res.data)
+        console.log("Saved Update");
+        alert(res.data.msg);
+        location.reload();
+      })["catch"](function (error) {
+        console.error(error);
+      });
+    }
   }
 });
 
@@ -37837,7 +37837,13 @@ var render = function() {
             ) +
             " "
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-danger", on: { click: _vm.deleteJob } },
+        [_vm._v("Delete")]
+      )
     ])
   ])
 }

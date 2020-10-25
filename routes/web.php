@@ -38,3 +38,4 @@ Route::post('/personal/setSkill', [App\Http\Controllers\PersonalController::clas
 Route::get('/company', [App\Http\Controllers\CompanyController::class, 'index'])->name('company.home');
 Route::get('/company/addJob', [App\Http\Controllers\CompanyController::class, 'jobAddUI'])->name('company.job.add');
 Route::post('/company/addJob', [App\Http\Controllers\CompanyController::class, 'job_add'])->name('company.job.action.add');
+Route::post('/company/deleteJob', [App\Http\Controllers\CompanyController::class, 'deleteJob'])->name('company.job.action.delete');

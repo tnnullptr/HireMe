@@ -10,6 +10,7 @@
             <p class="card-subtitle mb-2 text-muted"><i class="fa fa-money"></i> {{job2.salary}}</p>
             <p class="card-subtitle mb-2 text-muted"><i class="fa fa-location-arrow"></i> {{job2.location}} </p>
             <p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> {{job2.type == "PARTTIME" ? "兼職" : job2.type == "FULLTIME" ? "全職" : "政府官方"}} </p>
+            <button @click="deleteJob" class="btn btn-danger">Delete</button>
             <!--<p class="card-subtitle mb-2 text-muted"><i class="fa fa-bookmark"></i> {{skills}} </p>-->
         </div>
     </div>
@@ -18,7 +19,7 @@
 <script>
 export default {
     name: "Job",
-    props: ['jobs','admin','skill'],
+    props: ['jobs','admin','skill','delete-endpoint'],
     mounted() {
         this.job2 = JSON.parse(this.jobs);
         this.skills = JSON.parse(this.skill);
@@ -30,11 +31,10 @@ export default {
         }
     },
     methods:{
-        /*accept(e){
+        deleteJob(){
             var that = this
-            axios.post(that.acceptEndpoint, {
-                'status': Number(e.currentTarget.dataset.status),
-                'id': that.skill.id
+            axios.post(that.deleteEndpoint, {
+                'id': that.job2.id
             }).then((res) => {
                 //console.table(res.data)
                 console.log("Saved Update")
@@ -43,7 +43,7 @@ export default {
             }).catch((error) => {
                 console.error(error)
             })
-        }*/
+        }
     }
 }
 </script>

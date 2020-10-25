@@ -56,6 +56,16 @@ class CompanyController extends Controller {
         return $this->index();
     }
 
+    public function deleteJob(Request $request){
+        $id = $request->input('id');
+        Job::where('id',$id)->delete();
+        JobSkill::where('job_id',$id)->delete();
+        return response()->json([
+            'status'=>'ok',
+            'msg'=>'Deleted.'
+        ]);
+    }
+
     public function jobAddUI(){
         $skill_types = SkillType::all();
         return view('company.add')
