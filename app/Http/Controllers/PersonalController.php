@@ -55,6 +55,7 @@ class PersonalController extends Controller {
         return view('personal.home')
             ->with('skills', $skill_types)
             ->with('personal_skills',$owning_skill)
-            ->with('file_path',$filePath);
+            ->with('file_path',$filePath)
+            ->with('is_covid',Auth::user()->covid19);
     }
 }

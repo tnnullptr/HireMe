@@ -85,6 +85,17 @@
                                 @if($file_path != "")
                                 (<a href="{{$file_path}}">先前上傳的文件</a>)
                                 @endif
+
+                                @if($is_covid)
+                                <i class="fa fa-check-circle text-success"
+                                   data-toggle="tooltip" data-placement="top" title="Verified COVID19 Influenced Person"
+                                   ></i>
+                                @else
+                                <i class="fa fa-times-circle text-danger"
+                                   data-toggle="tooltip" data-placement="top" title="Unverified COVID19 Influenced Person"
+                                   v-else-if="isCovid === 0"></i>
+                                @endif
+
                                 <input type="file" class="form-control-file" id="covid19_doc" name="covid19_doc">
                             </div>
                             <button type="submit" class="btn btn-success" >Save</button>
