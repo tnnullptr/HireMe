@@ -15,8 +15,11 @@
                         @endif
 
                         Hello, admin<br>
-                        <a href="{{route('admin.skills.home')}}">Skills List</a><br>
-                        <a href="{{route('admin.covid19.home')}}">COVID19 Document List</a>
+                        <ul class="list-group">
+                            <a href="{{route('admin.skills.home')}}" class="list-group-item">Skills List</a>
+                            <a href="{{route('admin.covid19.home')}}" class="list-group-item">COVID19 Document List</a>
+                        </ul>
+
                     </div>
                 </div>
             </div>
