@@ -43,7 +43,7 @@
                             @foreach($Users as $usr)
                                 <div class="card w-100">
                                     <div class="card-header">
-                                        {{$usr->name}}
+                                        {{$usr->name}} <span class="badge badge-warning">受 COVID-19 影響</span>
                                     </div>
                                     <div class="card-body">
                                         <a href="mailto:{{$usr['email']}}" class="card-subtitle mb-2"><i class="fa fa-mail-forward"></i> {{$usr['email']}}</a>

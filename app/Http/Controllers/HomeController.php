@@ -83,8 +83,6 @@ class HomeController extends Controller
         }
 
         $users = User::where('type','USER')->get();
-        shuffle($users);
-
 
         return view('home')
             ->with('Jobs',$nnSE)
