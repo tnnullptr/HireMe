@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +231,9 @@
       <updated>1603501917860</updated>
       <workItem from="1603501919811" duration="51449000" />
       <workItem from="1603581811860" duration="21253000" />
-      <workItem from="1603606048339" duration="350000" />
-    </task>
-    <task id="LOCAL-00010" summary="[Add] Add checking admin middleware.">
-      <created>1603511438920</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1603511438920</updated>
+      <workItem from="1603606048339" duration="1925000" />
+      <workItem from="1604027703826" duration="412000" />
+      <workItem from="1604113272941" duration="213000" />
     </task>
     <task id="LOCAL-00011" summary="[Modify] Add Seeder.">
       <created>1603511461797</created>
@@ -573,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603606134623</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Update">
+      <created>1603606495671</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1603606495672</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,6 +616,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Plugins" timestamp="1604028117848">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Plugins/0.0.1280.680@0.0.1280.680" timestamp="1604028117848" />
     <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603559729686">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -655,13 +664,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603501948165" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603606139023">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603606501072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603606139023" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603599175360">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603606501072" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604028049453">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603599175360" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1604028049453" />
   </component>
 </project>

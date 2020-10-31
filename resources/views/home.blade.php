@@ -43,7 +43,10 @@
                             @foreach($Users as $usr)
                                 <div class="card w-100">
                                     <div class="card-header">
-                                        {{$usr->name}} <span class="badge badge-warning">受 COVID-19 影響</span>
+                                        {{$usr->name}}
+                                        @if($usr->covid19)
+                                            <span class="badge badge-warning">受 COVID-19 影響</span>
+                                        @endif
                                     </div>
                                     <div class="card-body">
                                         <a href="mailto:{{$usr['email']}}" class="card-subtitle mb-2"><i class="fa fa-mail-forward"></i> {{$usr['email']}}</a>
@@ -59,16 +62,16 @@
                         @foreach($Special as $job)
                             <div class="card w-100 border border-success">
                                 <div class="card-header">
-                                    {{$job['title']}} &nbsp;<span class="badge badge-info">官方職缺</span>
+                                    {{($job['title'] ?? '')}} &nbsp;<span class="badge badge-info">官方職缺</span>
                                 </div>
                                 <div class="card-body">
-                                    <p class="card-text">{{$job['徵才條件'].$job['報名方式']}} </p>
+                                    <p class="card-text">{{($job['徵才條件'] ?? '').($job['報名方式'] ?? '')}} </p>
                                 </div>
                                 <div class="card-footer">
                                     <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-location-arrow"></i> {{$job['工作地點']}} </p>
+                                            class="fa fa-location-arrow"></i> {{$job['工作地點'] ?? ''}} </p>
                                     <p class="card-subtitle mb-2 text-muted"><i
-                                            class="fa fa-bookmark"></i> {{$job['職缺單位']}}
+                                            class="fa fa-bookmark"></i> {{$job['職缺單位'] ?? ''}}
                                     </p>
                                 </div>
                             </div>
