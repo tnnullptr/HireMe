@@ -66,7 +66,9 @@ class HomeController extends Controller
                 if(in_array($uskill,$a['data']) && in_array($uskill,$b['data'])){
                     continue;
                 }else{
-                    return in_array($uskill,$a['data']) > in_array($uskill,$b['data']);
+                    if(in_array($uskill,$a['data']) > in_array($uskill,$b['data'])){
+                        return 1;
+                    }
                 }
             }
             return 1;

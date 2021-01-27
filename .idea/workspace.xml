@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b6d17365-b506-4401-a723-8a56e1fbeaac" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,14 +233,11 @@
       <workItem from="1603581811860" duration="21253000" />
       <workItem from="1603606048339" duration="1925000" />
       <workItem from="1604027703826" duration="412000" />
-      <workItem from="1604113272941" duration="213000" />
-    </task>
-    <task id="LOCAL-00011" summary="[Modify] Add Seeder.">
-      <created>1603511461797</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1603511461797</updated>
+      <workItem from="1604113272941" duration="422000" />
+      <workItem from="1606888149448" duration="599000" />
+      <workItem from="1607504430578" duration="40000" />
+      <workItem from="1608048996491" duration="5000" />
+      <workItem from="1611761020498" duration="96000" />
     </task>
     <task id="LOCAL-00012" summary="[Add] Add Admin Panel.">
       <created>1603511484987</created>
@@ -578,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603606495672</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="[Fix] Fix covid19；API undefined error">
+      <created>1604113686885</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1604113686885</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -613,7 +617,8 @@
     <MESSAGE value="[Add] Add Admin Panel." />
     <MESSAGE value="[Fix] Fix Register SQL error." />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="[Fix] Fix covid19；API undefined error" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Fix] Fix covid19；API undefined error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="0" key="#Plugins" timestamp="1604028117848">
@@ -664,10 +669,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603501948165" />
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1603606501072">
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2" timestamp="1604113688607">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1603606501072" />
+    <state x="233" y="60" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604113688607" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1604028049453">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
